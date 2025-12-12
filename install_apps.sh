@@ -106,6 +106,16 @@ else
     echo "✓ EasyEffects already installed"
 fi
 
+# Linux Studio Plugins (official repo)
+echo ""
+echo "Installing Linux Studio Plugins..."
+if ! package_installed lsp-plugins; then
+    sudo pacman -S --needed --noconfirm lsp-plugins
+    echo "✓ Linux Studio Plugins installed"
+else
+    echo "✓ Linux Studio Plugins already installed"
+fi
+
 # HTTPie (official repo)
 echo ""
 echo "Installing HTTPie..."
@@ -233,6 +243,7 @@ echo "  ✓ MariaDB Client"
 echo "  ✓ PostgreSQL Client"
 echo "  ✓ GIMP"
 echo "  ✓ EasyEffects"
+echo "  ✓ Linux Studio Plugins"
 echo "  ✓ HTTPie"
 echo "  ✓ Slack Desktop"
 echo "  ✓ Notion Desktop"
