@@ -2,7 +2,7 @@
 # Plasma Configuration Backup Script
 # Backs up KDE Plasma panel, widget, and layout configurations
 
-BACKUP_DIR="/home/willlian/setup/plasma_config_backup"
+BACKUP_DIR="/home/willian/setup/plasma_config_backup"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 
 echo "Creating Plasma configuration backup..."
