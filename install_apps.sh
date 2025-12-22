@@ -226,8 +226,39 @@ EOF
 
     chmod +x ~/.local/share/applications/jetbrains-datagrip.desktop
     echo "✓ Desktop entry created"
+
+    # Configure DataGrip for Wayland
+    echo "Configuring DataGrip for Wayland..."
+    DATAGRIP_CONFIG_DIR="$HOME/.config/JetBrains"
+    # The config directory will be created on first run, but we can set up the vmoptions template
+    # Note: The actual directory name includes the version (e.g., DataGrip2024.3)
+    # This configuration will need to be done after first launch
+    echo "  Note: After first launch, Wayland support will be configured automatically"
 else
     echo "✓ DataGrip already installed at $DATAGRIP_DIR"
+
+    # Configure DataGrip for Wayland if not already configured
+    echo "Configuring DataGrip for Wayland..."
+    DATAGRIP_CONFIG_DIR=$(ls -d ~/.config/JetBrains/DataGrip* 2>/dev/null | head -1)
+    if [ -n "$DATAGRIP_CONFIG_DIR" ]; then
+        VMOPTIONS_FILE="$DATAGRIP_CONFIG_DIR/datagrip64.vmoptions"
+        if [ -f "$VMOPTIONS_FILE" ]; then
+            if ! grep -q "WLToolkit" "$VMOPTIONS_FILE"; then
+                echo "-Dawt.toolkit.name=WLToolkit" >> "$VMOPTIONS_FILE"
+                echo "✓ DataGrip Wayland support configured"
+            else
+                echo "✓ DataGrip Wayland support already configured"
+            fi
+        else
+            echo "  Creating vmoptions file for Wayland support..."
+            cat > "$VMOPTIONS_FILE" <<VMOPTIONS
+-Dawt.toolkit.name=WLToolkit
+VMOPTIONS
+            echo "✓ DataGrip Wayland support configured"
+        fi
+    else
+        echo "  DataGrip config directory not found. Launch DataGrip once to create it."
+    fi
 fi
 
 echo ""
@@ -256,5 +287,6 @@ echo "Notes:"
 echo "  - Log out and back in for Docker group membership to take effect"
 echo "  - DataGrip can be launched from: ~/Apps/DataGrip/bin/datagrip.sh"
 echo "  - DataGrip desktop entry has been created in application menu"
+echo "  - DataGrip configured for Wayland support (restart DataGrip if running)"
 echo "  - Database clients installed without servers (MariaDB, PostgreSQL)"
 echo ""

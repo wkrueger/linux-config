@@ -4,20 +4,6 @@ RightButton;NoModifier=org.kde.contextmenu
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=0061fbd9-1d40-45e9-b001-86d5922055bc
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.image
-
-[Containments][1][General]
-positions={"1920x1080":[]}
-
 [Containments][2]
 activityId=
 formfactor=2
@@ -61,8 +47,8 @@ plugin=org.kde.plasma.kickoff
 
 [Containments][2][Applets][3][Configuration]
 PreloadWeight=100
-popupHeight=509
-popupWidth=647
+popupHeight=524
+popupWidth=663
 
 [Containments][2][Applets][3][Configuration][General]
 favorites=preferred://browser,org.kde.dolphin.desktop,org.kde.elisa.desktop,org.kde.konsole.desktop,org.manjaro.pamac.manager.desktop,systemsettings.desktop
@@ -80,7 +66,8 @@ DialogHeight=630
 DialogWidth=810
 
 [Containments][2][Applets][4][Configuration][General]
-launchers=preferred://filemanager,applications:org.kde.konsole.desktop,preferred://browser
+indicateAudioStreams=false
+launchers=preferred://filemanager,applications:notion.desktop,preferred://browser,applications:code.desktop,applications:jetbrains-datagrip.desktop
 showOnlyCurrentDesktop=false
 
 [Containments][2][Applets][5]
@@ -106,8 +93,8 @@ immutability=1
 lastScreen=-1
 location=4
 plugin=org.kde.plasma.systemtray
-popupHeight=432
-popupWidth=432
+popupHeight=439
+popupWidth=440
 wallpaperplugin=org.kde.image
 
 [Containments][2][Applets][8][Applets][10]
@@ -157,6 +144,9 @@ plugin=org.kde.plasma.printmanager
 immutability=1
 plugin=org.kde.plasma.volume
 
+[Containments][2][Applets][8][Applets][20][Configuration]
+PreloadWeight=65
+
 [Containments][2][Applets][8][Applets][20][Configuration][General]
 migrated=true
 
@@ -168,9 +158,15 @@ plugin=org.kde.plasma.weather
 immutability=1
 plugin=org.kde.plasma.brightness
 
+[Containments][2][Applets][8][Applets][23][Configuration]
+PreloadWeight=42
+
 [Containments][2][Applets][8][Applets][24]
 immutability=1
 plugin=org.kde.plasma.bluetooth
+
+[Containments][2][Applets][8][Applets][24][Configuration]
+PreloadWeight=47
 
 [Containments][2][Applets][8][Applets][25]
 immutability=1
@@ -180,17 +176,66 @@ plugin=org.kde.plasma.networkmanagement
 immutability=1
 plugin=org.kde.plasma.battery
 
+[Containments][2][Applets][8][Applets][26][Configuration]
+PreloadWeight=42
+
+[Containments][2][Applets][8][Applets][29]
+immutability=1
+plugin=org.kde.plasma.mediacontroller
+
+[Containments][2][Applets][8][Applets][29][Configuration]
+PreloadWeight=5
+
 [Containments][2][Applets][8][ConfigDialog]
 DialogHeight=630
 DialogWidth=810
 
 [Containments][2][Applets][8][General]
+disabledStatusNotifiers=chrome_status_icon_1
 extraItems=org.kde.plasma.battery,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.brightness,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.weather
-hiddenItems=MSM Notifier for Plasma5,Package Manager,Yakuake,org.kde.plasma.brightness,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.weather
+hiddenItems=MSM Notifier for Plasma5,Package Manager,Yakuake,org.kde.plasma.brightness,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.kscreen,org.kde.kdeconnect,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.weather,Gerenciador de pacotes
 knownItems=org.kde.kdeconnect,org.kde.kscreen,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.weather
 
 [Containments][2][General]
 AppletOrder=3;4;27;5;6;7;8;21
+
+[Containments][28]
+ItemGeometries-3072x1728=
+ItemGeometriesHorizontal=
+activityId=6361eb87-498a-49f0-96d3-6fb8f9707e94
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][28][Wallpaper][org.kde.image][General]
+Image=/home/willian/Downloads/photo-1597315675999-282c2ff404e1.jpeg
+
+[Containments][55]
+activityId=
+formfactor=2
+immutability=1
+lastScreen=0
+location=3
+plugin=org.kde.panel
+wallpaperplugin=org.kde.image
+
+[Containments][55][Applets][56]
+immutability=1
+plugin=org.kde.plasma.appmenu
+
+[Containments][55][Applets][56][Configuration]
+popupHeight=400
+popupWidth=560
+
+[Containments][55][Applets][56][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][55][General]
+AppletOrder=56
 
 [ScreenMapping]
 itemsOnDisabledScreens=

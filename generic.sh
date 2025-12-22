@@ -53,6 +53,14 @@ if [ -f "$HOME/.zshrc" ]; then
     fi
 fi
 
+# Electron Wayland Configuration
+echo "Configuring Electron apps for Wayland..."
+mkdir -p "$HOME/.config/environment.d"
+cat > "$HOME/.config/environment.d/electron.conf" << 'EOF'
+ELECTRON_OZONE_PLATFORM_HINT=wayland
+EOF
+echo "Electron Wayland support configured"
+
 echo ""
 echo "Configuration complete!"
 echo "- Dark mode: Enabled (BreezeDark)"
@@ -63,3 +71,4 @@ echo "- Virtual desktops: 3 desktops (horizontal layout)"
 echo "- Desktop shortcuts: Meta+1/2/3"
 echo "- Touchpad gestures: 4-finger swipe left/right for desktop switching"
 echo "- Zsh autocorrect: Disabled"
+echo "- Electron apps: Wayland mode enabled (requires re-login)"

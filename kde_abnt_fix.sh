@@ -1,4 +1,7 @@
 #!/bin/bash
+# Rodar esse script se seu teclado for PT-BR e estiver com comportamento
+# estranho após a instalação
+
 # KDE Plasma Wayland - Brazilian ABNT2 Keyboard Layout Fix
 # This script configures the keyboard layout to Portuguese Brazil ABNT2
 # so that Shift+2 produces @ instead of "
