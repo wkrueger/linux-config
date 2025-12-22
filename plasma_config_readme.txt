@@ -2,7 +2,7 @@ KDE Plasma Configuration Export
 ================================
 
 Date: $(date)
-Location: /home/willlian/setup/plasma_config_backup/
+Location: /home/willian/setup/plasma_config_backup/
 
 PANEL CONFIGURATION
 -------------------
@@ -96,7 +96,7 @@ RESTORATION
 -----------
 To restore this configuration on a new system or after reset:
 
-1. Copy the backup directory to /home/willlian/setup/plasma_config_backup/
+1. Copy the backup directory to /home/willian/setup/plasma_config_backup/
 2. Run: ./plasma_restore.sh
 3. Or manually copy files:
    cp plasma_config_backup/* ~/.config/
